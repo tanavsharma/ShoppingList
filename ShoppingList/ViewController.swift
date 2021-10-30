@@ -88,6 +88,35 @@ class ViewController: UIViewController {
      * and resets the screen back to default
      */
     @IBAction func clearScreen(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Are You Sure?", message: "This Action will clear your screen. Are you sure you want to continue?", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {
+                                        action in
+            self.lblOne.text = "1"
+            self.lblTwo.text = "1"
+            self.lblThree.text = "1"
+            self.lblFour.text = "1"
+            self.lblFive.text = "1"
+            
+            self.stepperOne = ""
+            self.stepperTwo = ""
+            self.stepperThree = ""
+            self.stepperFour = ""
+            self.stepperFive = ""
+            
+            self.listItemOne.text = ""
+            self.listItemTwo.text = ""
+            self.listItemThree.text = ""
+            self.listItemFour.text = ""
+            self.listItemFive.text = ""
+            
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+
+        self.present(alert, animated: true)
+        
+
     }
     
     
