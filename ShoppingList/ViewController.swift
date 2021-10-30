@@ -8,12 +8,88 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var stepperOne = ""
+    var stepperTwo = ""
+    var stepperThree = ""
+    var stepperFour = ""
+    var stepperFive = ""
+    
+    //List Items
+    @IBOutlet weak var mainListTitle: UITextField!
+    @IBOutlet weak var listItemOne: UITextField!
+    @IBOutlet weak var listItemTwo: UITextField!
+    @IBOutlet weak var listItemThree: UITextField!
+    @IBOutlet weak var listItemFour: UITextField!
+    @IBOutlet weak var listItemFive: UITextField!
+    
+    //Label Items
+    @IBOutlet weak var lblOne: UILabel!
+    @IBOutlet weak var lblTwo: UILabel!
+    @IBOutlet weak var lblThree: UILabel!
+    @IBOutlet weak var lblFour: UILabel!
+    @IBOutlet weak var lblFive: UILabel!
+    
+    //Stepper Items
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Setting All Labels To 1
+        lblOne.text = "1"
+        lblTwo.text = "1"
+        lblThree.text = "1"
+        lblFour.text = "1"
+        lblFive.text = "1"
     }
 
-
+    
+    @IBAction func stepperOne(_ sender: UIStepper) {
+        stepperOne = String(Int(sender.value))
+        lblOne.text = stepperOne
+    }
+    
+    
+    @IBAction func stepperTwo(_ sender: UIStepper) {
+        stepperTwo = String(Int(sender.value))
+        lblTwo.text = stepperTwo
+        
+    }
+    
+    
+    @IBAction func stepperThree(_ sender: UIStepper) {
+        stepperThree = String(Int(sender.value))
+        lblThree.text = stepperThree
+        
+    }
+    
+    @IBAction func stepperFour(_ sender: UIStepper) {
+        stepperFour = String(Int(sender.value))
+        lblFour.text = stepperFour
+        
+    }
+    
+    
+    @IBAction func stepperFive(_ sender: UIStepper) {
+        stepperFive = String(Int(sender.value))
+        lblFive.text = stepperFive
+        
+    }
+    
+    
+    
+    
+    
+    //Save Button - Functionality Comming Soon
+    @IBAction func saveList(_ sender: Any) {
+    }
+    
+    /* Clear Screen - clears all inputs from users
+     * and resets the screen back to default
+     */
+    @IBAction func clearScreen(_ sender: Any) {
+    }
+    
+    
 }
 
