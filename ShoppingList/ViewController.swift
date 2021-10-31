@@ -1,9 +1,10 @@
-//
-//  ViewController.swift
-//  ShoppingList
-//
-//  Created by Tanav Sharma on 2021-10-30.
-//
+    /* Full Name:   Tanav Sharma
+     * ID:          301170162
+     * App Name:    Shopping List
+     * App Desc:    Create and manage many different shopping lists
+     * App Version: 1.0
+     * Date:        Oct 31st, 2021
+     */
 
 import UIKit
 
@@ -40,6 +41,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Setting All Labels To 1
         lblOne.text = "1"
         lblTwo.text = "1"
@@ -50,37 +52,44 @@ class ViewController: UIViewController {
         
     }
 
-    
+    /* As the user interacts with the stepper
+     * it will increment or decrement the label
+     */
     @IBAction func stepperOne(_ sender: UIStepper) {
         stepperOneVar = String(Int(sender.value))
         lblOne.text = stepperOneVar
     }
     
-    
+    /* As the user interacts with the stepper
+     * it will increment or decrement the label
+     */
     @IBAction func stepperTwo(_ sender: UIStepper) {
         stepperTwoVar = String(Int(sender.value))
         lblTwo.text = stepperTwoVar
-        
     }
     
-    
+    /* As the user interacts with the stepper
+     * it will increment or decrement the label
+     */
     @IBAction func stepperThree(_ sender: UIStepper) {
         stepperThreeVar = String(Int(sender.value))
         lblThree.text = stepperThreeVar
-        
     }
     
+    /* As the user interacts with the stepper
+     * it will increment or decrement the label
+     */
     @IBAction func stepperFour(_ sender: UIStepper) {
         stepperFourVar = String(Int(sender.value))
         lblFour.text = stepperFourVar
-        
     }
     
-    
+    /* As the user interacts with the stepper
+     * it will increment or decrement the label
+     */
     @IBAction func stepperFive(_ sender: UIStepper) {
         stepperFiveVar = String(Int(sender.value))
         lblFive.text = stepperFiveVar
-        
     }
     
     //Save Button - Functionality Comming Soon
@@ -97,6 +106,13 @@ class ViewController: UIViewController {
      * and resets the screen back to default
      */
     @IBAction func clearScreen(_ sender: Any) {
+        
+        /* Displaying an alert, validating with user
+         * if they really meant to press the cancel
+         * button.
+         * If yes - clear the screen & reset all textfiels and stepper values
+         * if no - do nothing.
+         */
         
         let alert = UIAlertController(title: "Are You Sure?", message: "This Action will clear your screen. Are you sure you want to continue?", preferredStyle: .alert)
 
