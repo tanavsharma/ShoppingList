@@ -54,6 +54,7 @@ class ViewController: UIViewController {
         lblFour.text = "1"
         lblFive.text = "1"
         
+        mainListTitle.text = "Shopping List"
         saveButtonStyles.layer.cornerRadius = 15
         cancelButtonStyles.layer.cornerRadius = 15
         
@@ -134,7 +135,7 @@ class ViewController: UIViewController {
             self.lblFour.text = "1"
             self.lblFive.text = "1"
             
-            self.mainListTitle.text = ""
+            self.mainListTitle.text = "Shopping List"
             
             self.stepperOne.value = 1
             self.stepperTwo.value = 1
