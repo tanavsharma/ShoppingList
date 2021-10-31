@@ -9,11 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var stepperOne = ""
-    var stepperTwo = ""
-    var stepperThree = ""
-    var stepperFour = ""
-    var stepperFive = ""
+    var stepperOneVar = ""
+    var stepperTwoVar = ""
+    var stepperThreeVar = ""
+    var stepperFourVar = ""
+    var stepperFiveVar = ""
     
     //List Items
     @IBOutlet weak var mainListTitle: UITextField!
@@ -31,6 +31,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblFive: UILabel!
     
     //Stepper Items
+    @IBOutlet weak var stepperOne: UIStepper!
+    @IBOutlet weak var stepperTwo: UIStepper!
+    @IBOutlet weak var stepperThree: UIStepper!
+    @IBOutlet weak var stepperFour: UIStepper!
+    @IBOutlet weak var stepperFive: UIStepper!
     
     
     override func viewDidLoad() {
@@ -41,47 +46,51 @@ class ViewController: UIViewController {
         lblThree.text = "1"
         lblFour.text = "1"
         lblFive.text = "1"
+        
+        
     }
 
     
     @IBAction func stepperOne(_ sender: UIStepper) {
-        stepperOne = String(Int(sender.value))
-        lblOne.text = stepperOne
+        stepperOneVar = String(Int(sender.value))
+        lblOne.text = stepperOneVar
     }
     
     
     @IBAction func stepperTwo(_ sender: UIStepper) {
-        stepperTwo = String(Int(sender.value))
-        lblTwo.text = stepperTwo
+        stepperTwoVar = String(Int(sender.value))
+        lblTwo.text = stepperTwoVar
         
     }
     
     
     @IBAction func stepperThree(_ sender: UIStepper) {
-        stepperThree = String(Int(sender.value))
-        lblThree.text = stepperThree
+        stepperThreeVar = String(Int(sender.value))
+        lblThree.text = stepperThreeVar
         
     }
     
     @IBAction func stepperFour(_ sender: UIStepper) {
-        stepperFour = String(Int(sender.value))
-        lblFour.text = stepperFour
+        stepperFourVar = String(Int(sender.value))
+        lblFour.text = stepperFourVar
         
     }
     
     
     @IBAction func stepperFive(_ sender: UIStepper) {
-        stepperFive = String(Int(sender.value))
-        lblFive.text = stepperFive
+        stepperFiveVar = String(Int(sender.value))
+        lblFive.text = stepperFiveVar
         
     }
     
-    
-    
-    
-    
     //Save Button - Functionality Comming Soon
     @IBAction func saveList(_ sender: Any) {
+        
+        /* Probably save the items in a dictionary
+         *
+         */
+        
+        
     }
     
     /* Clear Screen - clears all inputs from users
@@ -99,11 +108,14 @@ class ViewController: UIViewController {
             self.lblFour.text = "1"
             self.lblFive.text = "1"
             
-            self.stepperOne = ""
-            self.stepperTwo = ""
-            self.stepperThree = ""
-            self.stepperFour = ""
-            self.stepperFive = ""
+            self.mainListTitle.text = ""
+            
+            self.stepperOne.value = 1
+            self.stepperTwo.value = 1
+            self.stepperThree.value = 1
+            self.stepperFour.value = 1
+            self.stepperFive.value = 1
+            
             
             self.listItemOne.text = ""
             self.listItemTwo.text = ""
@@ -115,8 +127,6 @@ class ViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
 
         self.present(alert, animated: true)
-        
-
     }
     
     

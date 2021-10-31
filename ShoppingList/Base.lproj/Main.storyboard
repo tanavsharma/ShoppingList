@@ -311,6 +311,11 @@
                         <outlet property="listItemThree" destination="ynZ-PP-Tz4" id="zyr-Q0-SQy"/>
                         <outlet property="listItemTwo" destination="B7g-Bm-B88" id="flB-zo-XcX"/>
                         <outlet property="mainListTitle" destination="Qlo-jA-0s2" id="CUp-8G-Bjd"/>
+                        <outlet property="stepperFive" destination="1m4-pN-3SB" id="9JJ-1A-UDZ"/>
+                        <outlet property="stepperFour" destination="Xsk-tE-CaM" id="Npp-ST-HDL"/>
+                        <outlet property="stepperOne" destination="aKZ-vM-UYc" id="YWk-AW-xaK"/>
+                        <outlet property="stepperThree" destination="086-SP-yXw" id="qyI-Bl-yIT"/>
+                        <outlet property="stepperTwo" destination="t57-YU-uY6" id="J7X-R9-Ail"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
