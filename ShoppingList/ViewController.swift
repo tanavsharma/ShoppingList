@@ -38,6 +38,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var stepperFour: UIStepper!
     @IBOutlet weak var stepperFive: UIStepper!
     
+    //Button Items
+    
+    @IBOutlet weak var saveButtonStyles: UIButton!
+    @IBOutlet weak var cancelButtonStyles: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +53,11 @@ class ViewController: UIViewController {
         lblThree.text = "1"
         lblFour.text = "1"
         lblFive.text = "1"
+        
+        saveButtonStyles.layer.cornerRadius = 15
+        cancelButtonStyles.layer.cornerRadius = 15
+        
+        
         
         
     }
