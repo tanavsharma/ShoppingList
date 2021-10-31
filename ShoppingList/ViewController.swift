@@ -55,8 +55,8 @@ class ViewController: UIViewController {
         lblFive.text = "1"
         
         mainListTitle.text = "Shopping List"
-        saveButtonStyles.layer.cornerRadius = 15
-        cancelButtonStyles.layer.cornerRadius = 15
+        saveButtonStyles.layer.cornerRadius = 5
+        cancelButtonStyles.layer.cornerRadius = 5
         
         
         
